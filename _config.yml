@@ -1,5 +1,5 @@
 # Site settings
-title: Emerald | A simple Jekyll blog
+title: Neural Convolutions
 description: "A minimal blog template, build with Jekyll."
 url: "http://neural-convolutions.net"
 author:
@@ -32,3 +32,5 @@ version: "1.1.0"
 custom_header: false
 custom_nav_footer: false
 reverse: false
+
+gems: [jekyll-paginate]
