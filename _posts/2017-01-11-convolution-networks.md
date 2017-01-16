@@ -1,5 +1,6 @@
 ---
 title: Convolution Neural Network
+comments: true
 ---
 In this article I will try to described how Neural Networks come about and what they are good for. Its history, purpose and possible future directions.
 
