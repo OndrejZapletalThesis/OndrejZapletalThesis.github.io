@@ -18,6 +18,8 @@
   }
   span {
       font-weight: 200;
+      display: block;
+      margin-bottom: 24px;
     }
 }
 
@@ -33,6 +35,43 @@
 
 #nav.menu-open {
   @include open(-14rem);
+
+  .social {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 11px;
+      width: 30px;
+      height: 30px;
+
+  }
+  .social.github {
+      background-image: url("/img/hub-icon.svg");
+  }
+  .social.linkedin {
+      background-image: url("/img/ink-icon.svg");
+  }
+  .social.twitter {
+      background-image: url("/img/twit-icon.svg");
+  }
+  .social:hover {
+      background-color: transparent;
+      opacity: 0.8;
+  }
+
+  #theme {
+      display: block;
+
+
+      font-size: 1em;
+      margin-top: 12px;
+      font-weight: 200;
+  }
+  #theme:hover {
+      background-color: $main-color;
+      color: $background-color;
+      text-decoration: underline;
+  }
 }
 
 #nav-left.menu-open-left {
