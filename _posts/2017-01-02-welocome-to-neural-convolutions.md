@@ -1,6 +1,7 @@
 ---
-title: Welcome to my new blog
+title: Welcome to Neural Convolutions
 comments: true
+author: Ondrej Zapletal
 ---
 Hi, my name is Ondrej Zapletal and I'm in my final year of masters degree at [The Faculty of Electrical Engineering](http://www.feec.vutbr.cz/fakulta/home.php?lang=en) in [Brno University of Technology](https://www.vutbr.cz/en/). More specifically in department of Cybernetics, Control and Measurements.
 
@@ -14,17 +15,15 @@ I'm not particularly familiar with Convolutional Neural Networks. For this reaso
 
 #### Currently I have plan to cover following topics:
 
-+ Neural networks in general
+* Neural networks in general
 
-+ Back-propagation
+* Back-propagation
 
-+ Convolution
+* Convolution
 
-+ GPGU
+* GPGU
 
-+ Python for machine learning
+* Python for machine learning
 
 
 > Let me know in comments bellow if you have any special wishes for future subjects.
-
----

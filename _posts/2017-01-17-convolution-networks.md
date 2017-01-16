@@ -1,6 +1,7 @@
 ---
 title: Convolution Neural Networks
 comments: true
+author: Ondrej Zapletal
 ---
 
 **Convolutional Neural Network** (**CNN**) is specialized type of **Artificial Neural Network** that was originally used in image processing applications. Where was taken advantage of their two dimensional character. Since then they were also very successfully employed in natural language and video processing. Invention of CNNs was inspired by biology of human visual cortex. In human eye light falls on the cornea where photosensitive cells fire signal for individual neurons that are connected to these cells. Neurons in visual cortex are typically connected to only few photosensitive cells which translates into the fact that neurons react only to small portion of observed scene. Therefore **Convolutional Neural Networks** typically aren't fully connected. This has positive effect on computational complexity of network training. Usually complexity of training is rising proportionally (and not exponentially opposed to classical **Fully Connected Neural Networks**) to number of inputs.
