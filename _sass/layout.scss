@@ -161,6 +161,9 @@
   position: relative;
   background: url("/img/banner.jpg") no-repeat center center;
   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   a {
   	text-decoration: none;
   	color: $text-color;
