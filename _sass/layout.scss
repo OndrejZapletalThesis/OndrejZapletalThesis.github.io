@@ -102,15 +102,15 @@
 #menu {
   height: 4px;
   width: 1.5em;
-  background-color: lighten($text-color, 35%);
-  margin-top: 8px;
+  background-color: white;
+  margin-top: 20px;
   &:after, &:before {
     content: "";
     display: block;
     position: relative;
     height: 4px;
     width: 1.5em;
-    background-color: lighten($text-color, 35%);
+    background-color: white;
     transition: all 0.3s ease-in;
   }
   &:before {
@@ -160,6 +160,8 @@
 	text-align: center;
   padding: 24px 0;
   position: relative;
+  background: url("/img/banner.jpg") no-repeat center center;
+  -webkit-background-size: cover;
   a {
   	text-decoration: none;
   	color: $text-color;
@@ -173,15 +175,29 @@
   h1 {
   	font-family: 'Signika', sans-serif; //Emerald logo font
     font-weight: 600;
+    color: white;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
   }
-  &:after {
-  	display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
-  }
+  /* &:after { */
+  /* 	display: block; */
+  /*   content: ''; */
+  /*   width: 5rem; */
+  /*   height: 1px; */
+  /*   margin: 23px auto; */
+  /*   background-color: lighten($text-color, 70%); */
+  /* } */
+  /* &:before { */
+  /* 	  display: block; */
+  /*     content: ''; */
+  /*     width: 5rem; */
+  /*     height: 1px; */
+  /*     margin: 23px auto; */
+  /*     background-color: lighten($text-color, 70%); */
+  /* } */
 }
 
 /* Posts */
