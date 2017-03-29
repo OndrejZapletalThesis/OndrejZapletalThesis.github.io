@@ -3,7 +3,6 @@ title: Welcome to Neural Convolutions
 comments: true
 author: Ondrej Zapletal
 ---
-Hello hello
 Hi, my name is Ondrej Zapletal and I'm in my final year of masters degree at [The Faculty of Electrical Engineering](http://www.feec.vutbr.cz/fakulta/home.php?lang=en) in [Brno University of Technology](https://www.vutbr.cz/en/). More specifically in department of Cybernetics, Control and Measurements.
 
 The subject of my master thesis is __Image Recognition by Convolutional Neural Networks - Basic Concepts__
