@@ -1,5 +1,15 @@
 <header id="header">
-	<a href="/">
-	  <h1>{{ site.title }}</h1>
-	</a>
+
+    <a href="/">
+        <h1>{{ site.title }}</h1>
+    </a>
+
+    <!-- Navigation -->
+    {% include menu.html %}
+
+    <!-- Icon menu -->
+    <a href="#" {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
+        <div id="menu"></div>
+    </a>
+
 </header>

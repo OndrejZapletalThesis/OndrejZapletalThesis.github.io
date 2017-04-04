@@ -2,7 +2,7 @@
 
 /* Navigation */
 
-#nav, #nav-left {
+#header #nav, #header #nav-left {
   a {
     display: block;
     color: $background-color;
@@ -33,7 +33,7 @@
 
 /* Toggle class to open menu */
 
-#nav.menu-open {
+#header #nav.menu-open {
   @include open(-14rem);
 
   .social {
@@ -330,6 +330,8 @@ hr {
 table, th, td {
     border: 1px solid black;
 }
+
+/* To be DELETED */
 
 #warning {
     color: red;

@@ -1,20 +1,20 @@
 <nav {% if site.reverse == true %}id="nav-left"{% else %}id="nav"{% endif %}>
-	<div id="nav-list">
-		<a href="{{ site.baseurl }}">Home</a>
+    <div id="nav-list">
+        <a href="{{ site.baseurl }}">Home</a>
 
-		<!-- Nav pages -->
-	  {% for page in site.pages %}
-	    {% if page.layout == "page" %}
-	      <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{ page.title }}">{{ page.title }}</a>
-	    {% endif %}
-	  {% endfor %}
+        <!-- Nav pages -->
+        {% for page in site.pages %}
+            {% if page.layout == "page" %}
+                <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{ page.title }}">{{ page.title }}</a>
+            {% endif %}
+        {% endfor %}
 
-    <!-- Nav links -->
-	  {% include link.html %}
+        <!-- Nav links -->
+        {% include link.html %}
 
-	</div>
+    </div>
 
-  <!-- Nav footer -->
-  {% include nav-footer.html %}
+    <!-- Nav footer -->
+    {% include nav-footer.html %}
 
 </nav>

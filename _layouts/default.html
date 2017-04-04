@@ -4,18 +4,12 @@
     {% include head.html %}
 
     <body>
+
         <div id="wrap">
-
-            <!-- Navigation -->
-            {% include menu.html %}
-
-            <!-- Icon menu -->
-            <a href="#" {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
-                <div id="menu"></div>
-            </a>
 
             <!-- Header -->
             {% include header.html %}
+
 
             <!-- Main content -->
             <div id="container">
@@ -24,12 +18,12 @@
 
                     {{ content }}
 
-                </main>
+                    <!-- Pagination links -->
+                    {% if paginator.total_pages > 1 %}
+                        {% include pagination.html %}
+                    {% endif %}
 
-                <!-- Pagination links -->
-                {% if paginator.total_pages > 1 %}
-                    {% include pagination.html %}
-                {% endif %}
+                </main>
 
             </div>
 
@@ -40,5 +34,7 @@
             {% include script.html %}
 
         </div>
+
     </body>
+
 </html>
