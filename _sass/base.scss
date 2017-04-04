@@ -21,6 +21,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
 $main-color: #1e30b5;
 $background-color: #FDFDFD;
 $text-color: #222222;
+$meta-color: rgb(107, 133, 160);
 
 /*- Base settings -*/
 
@@ -33,6 +34,7 @@ html {
 	line-height: 1.5;
 	color: $text-color;
 }
+
 
 
 /*- Link -*/

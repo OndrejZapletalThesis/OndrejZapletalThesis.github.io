@@ -1,6 +1,6 @@
 # Site settings
 title: Neural Convolutions
-description: "A minimal blog template, build with Jekyll."
+description: "Blog about Neural Networks"
 url: "http://neural-convolutions.net"
 author:
   name: "Ondrej Zapletal"
@@ -13,7 +13,7 @@ markdown: kramdown
 source: .
 destination: _site
 permalink: /:title
-paginate: 8
+paginate: 5
 paginate_path: /page:num/
 
 

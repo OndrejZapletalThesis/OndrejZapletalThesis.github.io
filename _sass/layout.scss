@@ -185,22 +185,6 @@
     -2px 2px 0 #000,
     2px 2px 0 #000;
   }
-  /* &:after { */
-  /* 	display: block; */
-  /*   content: ''; */
-  /*   width: 5rem; */
-  /*   height: 1px; */
-  /*   margin: 23px auto; */
-  /*   background-color: lighten($text-color, 70%); */
-  /* } */
-  /* &:before { */
-  /* 	  display: block; */
-  /*     content: ''; */
-  /*     width: 5rem; */
-  /*     height: 1px; */
-  /*     margin: 23px auto; */
-  /*     background-color: lighten($text-color, 70%); */
-  /* } */
 }
 
 /* Posts */
@@ -262,6 +246,11 @@ code {
   background-color: lighten($background-color, 35%);
 }
 
+.content-author {
+    font-size: 15px;
+    font-style: italic;
+}
+
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
 
 .content ul, .content ol {
@@ -288,8 +277,23 @@ code {
     color: $text-color;
   }
   a:hover {
-    background-color: lighten($main-color, 5%);
+    background-color: lighten($main-color, 30%);
   }
+}
+.pagination-navigation {
+    border-radius: 5px;
+    background-color: $meta-color;
+    color: darken($background-color, 5%);
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    font-size: 15px;
+    .next {
+        float: right;
+    }
+    a {
+        color: $background-color;
+    }
 }
 .page-item {
   background-color: $main-color;
@@ -310,8 +314,8 @@ footer {
   color: $background-color;
   text-align: center;
   padding: 0.6667em 0;
-
 }
+
 /* Inset, by Dan Eden */
 
 hr {
@@ -325,4 +329,8 @@ hr {
 
 table, th, td {
     border: 1px solid black;
+}
+
+#warning {
+    color: red;
 }

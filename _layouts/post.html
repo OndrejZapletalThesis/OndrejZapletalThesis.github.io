@@ -8,33 +8,26 @@ layout: default
 
         {{ content }}
 
+    </div>
+
+    <div class="pagination-navigation">
         {% if page.author %}
-            <p style="font-size:15px"> <i>by {{page.author}}</i></p>
-        {% else %}
-            <p style="font-size:15px"> <i>by unknown</i></p>
+            <p class="content-author"> Posted by <b>{{page.author}}</b></p>
         {% endif %}
 
+        {% if page.previous.url %}
+            <a class="prev" href="{{page.previous.url}}"><< {{page.previous.title}}</a>
+        {% endif %}
+        {% if page.next.url %}
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} >></a>
+        {% endif %}
+
+        <!-- this is here to clear the floating of next  -->
+        <div style="clear: both;"></div>
     </div>
+
 </article>
-<hr/>
 
 {% if page.comments %}
-
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function () {
-            this.page.url = "{{ page.url | prepend: site.url }}";
-            this.page.identifier = "{{ page.title | replace: ' ', '_' }}";
-        };
-
-        (function() {
-            var d = document, s = d.createElement('script');
-            s.src = '//neural-convolutions.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+    {% include comments.html %}
 {% endif %}
