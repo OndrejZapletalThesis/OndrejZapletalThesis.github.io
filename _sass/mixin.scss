@@ -5,7 +5,7 @@
 @mixin icon-position($position) {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 10px;
     #{$position}: 10px;
     z-index: 10;
     height: 24px;
