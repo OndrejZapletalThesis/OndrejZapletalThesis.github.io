@@ -2,341 +2,363 @@
 
 /* Navigation */
 
-#header #nav, #header #nav-left {
-    a {
-        display: block;
-        color: $background-color;
-        padding: 0.33334em 0;
-        font-size: 1.5em;
-        font-weight: 400;
-        @media (min-width: 940px) {
-            font-size: 1em;
-        }
-        &:hover {
-            background-color: lighten($main-color, 5%);
-        }
+#header #nav,
+#header #nav-left {
+  a {
+    color: $background-color;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: .33334em 0;
+
+    @media (min-width: 940px) {
+      font-size: 1em;
     }
-    span {
-        font-weight: 200;
-        display: block;
-        margin-bottom: 24px;
+
+    &:hover {
+      background-color: lighten($main-color, 5%);
     }
+  }
+
+  span {
+    display: block;
+    margin-bottom: 24px;
+  }
 }
 
 #nav {
-    @include nav-position(right);
+  @include nav-position(right);
 }
 
 #nav-left {
-    @include nav-position(left);
+  @include nav-position(left);
 }
 
 /* Toggle class to open menu */
 
 #header #nav.menu-open {
-    @include open(-14rem);
+  @include open(-14rem);
 
-    .social {
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-left: 11px;
-        width: 30px;
-        height: 30px;
+  .social {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    margin-left: 11px;
+    width: 30px;
+  }
 
-    }
-    .social.github {
-        background-image: url("/img/hub-icon.svg");
-    }
-    .social.linkedin {
-        background-image: url("/img/ink-icon.svg");
-    }
-    .social.twitter {
-        background-image: url("/img/twit-icon.svg");
-    }
-    .social:hover {
-        background-color: transparent;
-        opacity: 0.8;
-    }
+  .social.github {
+    background-image: url('/img/hub-icon.svg');
+  }
 
-    #theme {
-        display: block;
+  .social.linkedin {
+    background-image: url('/img/ink-icon.svg');
+  }
 
+  .social.twitter {
+    background-image: url('/img/twit-icon.svg');
+  }
 
-        font-size: 1em;
-        margin-top: 12px;
-        font-weight: 200;
-    }
-    #theme:hover {
-        background-color: $main-color;
-        color: $background-color;
-        text-decoration: underline;
-    }
+  .social:hover {
+    background-color: transparent;
+    opacity: .8;
+  }
+
+  #theme {
+    display: block;
+    font-size: 1em;
+    font-weight: 200;
+    margin-top: 12px;
+  }
+
+  #theme:hover {
+    background-color: $main-color;
+    color: $background-color;
+    text-decoration: underline;
+  }
 }
 
 #nav-left.menu-open-left {
-    @include open(14rem);
+  @include open(14rem);
 }
 
 /* Separator after menu */
-
 #nav-list:after {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: $background-color;
+  background-color: $background-color;
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 23px auto;
+  width: 5rem;
 }
 
 /* Icon menu */
 
 #nav-menu {
-    @include icon-position(right);
+  @include icon-position(right);
 }
 
 #nav-menu-left {
-    @include icon-position(left);
+  @include icon-position(left);
 }
 
 #menu {
+  background-color: $background-color;
+  height: 4px;
+  margin-top: 0;
+  width: 1.5em;
+
+  &:after, &:before {
+    background-color: $background-color;
+    content: '';
+    display: block;
     height: 4px;
+    position: relative;
+    transition: all .3s ease-in;
     width: 1.5em;
-    background-color: white;
-    margin-top: 0px;
-    &:after, &:before {
-        content: "";
-        display: block;
-        position: relative;
-        height: 4px;
-        width: 1.5em;
-        background-color: white;
-        transition: all 0.3s ease-in;
-    }
-    &:before {
-        top: -8px;
-    }
-    &:after {
-        top: 4px;
-    }
-    &.btn-close {
-        background: none;
-    }
-    &.btn-close:before {
-        top: 0;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        background-color: $background-color;
-    }
-    &.btn-close:after {
-        top: -4px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        background-color: $background-color;
-    }
+  }
+
+  &:before {
+    top: -8px;
+  }
+
+  &:after {
+    top: 4px;
+  }
+
+  &.btn-close {
+    background: none;
+  }
+
+  &.btn-close:before {
+    background-color: $background-color;
+    top: 0;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &.btn-close:after {
+    background-color: $background-color;
+    top: -4px;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 }
 
 /* Main content */
 
 .fixed {
-    position: fixed;
-    width: 100%;
-    @media (min-width: 940px) {
-        position: static;
-    }
+  position: fixed;
+  width: 100%;
+
+  @media (min-width: 940px) {
+    position: static;
+  }
 }
 
 #container {
-    margin:0 auto;
-    max-width: 730px;
-    padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 730px;
+  padding: 0 1.5rem;
 }
 
 #header {
-    text-align: center;
-    position: relative;
-    background: url("/img/banner.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    a {
-        text-decoration: none;
-        color: $text-color;
-        display: inline-block;
-        padding: 24px 0;
-    }
-    img {
-        max-height: 72px;
-        margin: 0 auto;
-        display: block;
-    }
-    h1 {
-        font-family: 'Signika', sans-serif; //Emerald logo font
-        font-weight: 600;
-        color: white;
-        text-shadow:
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
-    }
+  background: url('/img/banner.jpg') no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+
+  a {
+    color: $text-color;
+    display: inline-block;
+    padding: 24px 0;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-height: 72px;
+  }
+
+  h1 {
+    color: $background-color;
+    font-family: 'Signika', sans-serif; //Emerald logo font
+    font-weight: 600;
+    text-shadow: -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                 -2px 2px 0 #000,
+                 2px 2px 0 #000;
+  }
 }
 
 a#nav-menu{
-    padding: 12px 0;
+  padding: 12px 0;
 }
 
 /* Posts */
 
 #posts {
-    li {
-        list-style-type: none;
-    }
+  li {
+    list-style-type: none;
+  }
 }
 
 #post-page {
-    margin-bottom: 1.5em;
-    @media (min-width: 940px) {
-        margin-bottom: 1.3334em;
-    }
+  margin-bottom: 1.5em;
+
+  @media (min-width: 940px) {
+    margin-bottom: 1.3334em;
+  }
 }
 
 .post+.post:before {
-    display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
+  background-color: lighten($text-color, 70%);
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 23px auto;
+  width: 5rem;
 }
 
 .by-line {
-    display: block;
+  color: lighten($text-color, 25%);
+  display: block;
+  font-weight: 200;
+  line-height: 1.5em; /* 24px/16px */
+  margin-bottom: 1.5em; /* 24px/16px */
+
+  @media (min-width: 940px) {
     color: lighten($text-color, 25%);
-    line-height: 1.5em; /* 24px/16px */
-    margin-bottom: 1.5em; /* 24px/16px */
+    display: block;
     font-weight: 200;
-    @media (min-width: 940px) {
-        display: block;
-        color: lighten($text-color, 25%);
-        line-height: 1.3334em; /* 24px/18px */
-        margin-bottom: 1.3334em; /* 24px/18px */
-        font-weight: 200;
-    }
+    line-height: 1.3334em; /* 24px/18px */
+    margin-bottom: 1.3334em; /* 24px/18px */
+  }
 }
 
 img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 24px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  max-width: 100%;
 }
 
 img[title="Emerald"] {
-    box-shadow: 0 2px 6px #ddd;
+  box-shadow: 0 2px 6px #ddd;
 }
 
 code {
-    color: lighten($text-color, 35%);
-    background-color: lighten($background-color, 35%);
+  background-color: lighten($background-color, 35%);
+  color: lighten($text-color, 35%);
 }
 
 .content-author {
-    font-size: 15px;
-    font-style: italic;
+  font-size: 15px;
+  font-style: italic;
 }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
 
-.content ul, .content ol {
-    line-height: 1.5em; /* 24px/16px */
-    padding-left: 1.5em;
-    @media (min-width: 940px) {
-        line-height: 1.33334em; /* 24px/18px */
-    }
+.content ul,
+.content ol {
+  line-height: 1.5em; /* 24px/16px */
+  padding-left: 1.5em;
+
+  @media (min-width: 940px) {
+    line-height: 1.33334em; /* 24px/18px */
+  }
 }
 
 /* Pages */
 
 #page ul, #page ol {
-    padding-left: 1.5em;
+  padding-left: 1.5em;
 }
 
 /* Paginator */
 
 .pagination {
-    text-align: center;
-    margin: 2.666668em;
-    span {
-        background-color: darken($background-color, 5%);
-        color: $text-color;
-    }
-    a:hover {
-        background-color: lighten($main-color, 30%);
-    }
+  margin: 2.666668em;
+  text-align: center;
+
+  span {
+    background-color: darken($background-color, 5%);
+    color: $text-color;
+  }
+
+  a:hover {
+    background-color: lighten($main-color, 30%);
+  }
 }
+
 .pagination-navigation {
-    border-radius: 5px;
-    background-color: $meta-color;
-    color: darken($background-color, 5%);
-    text-align: left;
-    margin: 0;
-    padding: 10px;
-    font-size: 15px;
-    .next {
-        float: right;
-    }
-    a {
-        color: $background-color;
-    }
-}
-.page-item {
-    background-color: $main-color;
+  background-color: $meta-color;
+  border-radius: 5px;
+  color: darken($background-color, 5%);
+  font-size: 15px;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+
+  .next {
+    float: right;
+  }
+
+  a {
     color: $background-color;
-    padding: 4px 8px;
-    font-weight: 400;
-    padding: 0.5em 1em;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
+  }
+}
+
+.page-item {
+  background-color: $main-color;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: $background-color;
+  font-weight: 400;
+  padding: 4px 8px;
 }
 
 /* Footer */
 
 footer {
-    background-color: $main-color;
-    color: $background-color;
-    text-align: center;
-    padding: 0.6667em 0;
+  background-color: $main-color;
+  color: $background-color;
+  padding: .6667em 0;
+  text-align: center;
 }
 
 /* Inset, by Dan Eden */
 
 hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 30px;
-    margin-bottom: 30px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  height: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 table, th, td {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 /* To be DELETED */
 
 #warning {
-    color: red;
+  color: red;
 }

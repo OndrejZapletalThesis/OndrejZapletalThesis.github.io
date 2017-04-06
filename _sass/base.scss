@@ -5,65 +5,68 @@
 /*- Base reset -*/
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*- Base color -*/
 
 $main-color: #1e30b5;
-$background-color: #FDFDFD;
-$text-color: #222222;
+$background-color: #fdfdfd;
+$text-color: #222;
 $meta-color: rgb(107, 133, 160);
+#999988
 
 /*- Base settings -*/
-
 html {
-    background-color: $background-color;
-    font-size: 16px;
-    @media (min-width: 940px) {
-        font-size: 18px;
-    }
-    line-height: 1.5;
-    color: $text-color;
+  background-color: $background-color;
+  color: $text-color;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media (min-width: 940px) {
+    font-size: 18px;
+  }
 }
 
 
 
 /*- Link -*/
 a {
-    color: $main-color;
-    text-decoration: none;
-    font-weight: 700;
-    &:hover,
-    &:focus {
-        color: darken($main-color, 5%);
-    }
+  color: $main-color;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: darken($main-color, 5%);
+  }
 }
 
-html, body {
-    height: 100%;
-    min-height: 100%;
+html,
+body {
+  height: 100%;
+  min-height: 100%;
 }
 
 #wrap {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 #header, #footer {
-    flex: none;
+  flex: none;
 }
 
 #container {
-    flex: auto;
+  flex: auto;
 }
