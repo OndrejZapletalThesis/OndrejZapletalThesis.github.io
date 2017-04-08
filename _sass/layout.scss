@@ -1,6 +1,7 @@
-/* -- General Layout -- */
 
-/* Navigation */
+// -- General Layout --
+
+// Navigation
 
 #header #nav,
 #header #nav-left {
@@ -34,7 +35,7 @@
   @include nav-position(left);
 }
 
-/* Toggle class to open menu */
+// Toggle class to open menu
 
 #header #nav.menu-open {
   @include open(-14rem);
@@ -48,15 +49,15 @@
     width: 30px;
   }
 
-  .social.github {
+  .github {
     background-image: url('/img/hub-icon.svg');
   }
 
-  .social.linkedin {
+  .linkedin {
     background-image: url('/img/ink-icon.svg');
   }
 
-  .social.twitter {
+  .twitter {
     background-image: url('/img/twit-icon.svg');
   }
 
@@ -83,7 +84,7 @@
   @include open(14rem);
 }
 
-/* Separator after menu */
+// Separator after menu
 #nav-list:after {
   background-color: $background-color;
   content: '';
@@ -93,7 +94,7 @@
   width: 5rem;
 }
 
-/* Icon menu */
+// Icon menu
 
 #nav-menu {
   @include icon-position(right);
@@ -150,7 +151,7 @@
   }
 }
 
-/* Main content */
+// Main content
 
 .fixed {
   position: fixed;
@@ -204,7 +205,7 @@ a#nav-menu{
   padding: 12px 0;
 }
 
-/* Posts */
+// Posts
 
 #posts {
   li {
@@ -233,15 +234,15 @@ a#nav-menu{
   color: lighten($text-color, 25%);
   display: block;
   font-weight: 200;
-  line-height: 1.5em; /* 24px/16px */
-  margin-bottom: 1.5em; /* 24px/16px */
+  line-height: 1.5em; // 24px/16px
+  margin-bottom: 1.5em; // 24px/16px
 
   @media (min-width: 940px) {
     color: lighten($text-color, 25%);
     display: block;
     font-weight: 200;
-    line-height: 1.3334em; /* 24px/18px */
-    margin-bottom: 1.3334em; /* 24px/18px */
+    line-height: 1.3334em; // 24px/18px
+    margin-bottom: 1.3334em; // 24px/18px
   }
 }
 
@@ -270,25 +271,25 @@ code {
   font-style: italic;
 }
 
-/* Set the vertical rhythm (and padding-left) for lists inside post content */
+// Set the vertical rhythm (and padding-left) for lists inside post content
 
 .content ul,
 .content ol {
-  line-height: 1.5em; /* 24px/16px */
+  line-height: 1.5em; // 24px/16px
   padding-left: 1.5em;
 
   @media (min-width: 940px) {
-    line-height: 1.33334em; /* 24px/18px */
+    line-height: 1.33334em; // 24px/18px
   }
 }
 
-/* Pages */
+// Pages
 
 #page ul, #page ol {
   padding-left: 1.5em;
 }
 
-/* Paginator */
+// Paginator
 
 .pagination {
   margin: 2.666668em;
@@ -333,7 +334,7 @@ code {
   padding: 4px 8px;
 }
 
-/* Footer */
+// Footer
 
 footer {
   background-color: $main-color;
@@ -342,7 +343,7 @@ footer {
   text-align: center;
 }
 
-/* Inset, by Dan Eden */
+// Inset, by Dan Eden
 
 hr {
   border: 0;
@@ -357,7 +358,7 @@ table, th, td {
   border: 1px solid black;
 }
 
-/* To be DELETED */
+// To be DELETED
 
 #warning {
   color: red;
